@@ -10,7 +10,7 @@ router.use('/', wechat(config, function (req, res, next) {
     var message = req.weixin;
     console.log("==========================req.weixin start==================");
     console.log(message);
-    console.log("==========================req.weixin start==================");
+    console.log("==========================req.weixin end==================");
     if (message.FromUserName === 'diaosi') {
         // 回复屌丝(普通回复)
         res.reply('hehe');
