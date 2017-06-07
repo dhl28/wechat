@@ -39,7 +39,8 @@ router.use('/', wechat(config, function (req, res, next) {
                 title: '你来我家接我吧',
                 description: '这是女神与高富帅之间的对话',
                 picurl: 'http://f12.baidu.com/it/u=673135801,3696308275&fm=72',
-                url: 'http://travel.163.com/special/vikingeistla/'
+                // url: 'http://travel.163.com/special/vikingeistla/'
+                url: 'http://localhost'
             }
         ]);
     }
