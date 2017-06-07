@@ -5,6 +5,7 @@ var express = require('express');
 var router = express.Router();
 var wechat = require('wechat');
 var config = require('../config.js');
+var constant = require('../constant.js');
 router.use('/', wechat(config, function (req, res, next) {
     // 微信输入信息都在req.weixin上
     var message = req.weixin;
@@ -40,7 +41,7 @@ router.use('/', wechat(config, function (req, res, next) {
                 description: '这是女神与高富帅之间的对话',
                 picurl: 'http://f12.baidu.com/it/u=673135801,3696308275&fm=72',
                 // url: 'http://travel.163.com/special/vikingeistla/'
-                url: 'http://localhost'
+                url: constant.host
             }
         ]);
     }
