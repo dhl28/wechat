@@ -42,8 +42,7 @@ router.use('/', wechat(config, function (req, res, next) {
                 picurl: 'http://f12.baidu.com/it/u=673135801,3696308275&fm=72',
                 // url: 'http://travel.163.com/special/vikingeistla/'
                 // url: constant.host
-                url: "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb907dfb2faa05934&redirect_uri=https%3A%2F%2Fchong.qq.com%2Fphp%2Findex.php%3Fd%3D%26c%3DwxAdap"+
-                "ter%26m%3DmobileDeal%26showwxpaytitle%3D1%26vb2ctag%3D4_2030_5_1194_60&response_type=code&scope=snsapi_base&state=123#wechat_redirect"
+                 url: "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxcaf2b638d25c2cc4&redirect_uri=http%3a%2f%2f123.207.143.129%2fusers&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect"
             }
         ]);
     }
