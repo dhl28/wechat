@@ -29,8 +29,15 @@ $(document).ready(function () {
             console.log('--------userInfo start--------');
             console.log(d);
             console.log('--------userInfo end--------');
+            $('#userInfoDetail').text(d);
+            $('#nickname').text(d.nickname);
+            $('#sex').text(d.sex==1?'男':'女');
         })
     }).fail(function (err) {
         console.log(err);
+    })
+    //add event
+    $('#viewUserInfoDetail').on('click',function () {
+        $("userInfoDetail").toggle();
     })
 })
