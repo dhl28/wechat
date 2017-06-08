@@ -8,12 +8,13 @@ router.get('/', function (req, res, next) {
     res.render('user');
 });
 router.get('/accessToken', function (req, res) {
-    var  uri = ' https://api.weixin.qq.com/sns/oauth2/access_token';
+    var uri = ' https://api.weixin.qq.com/sns/oauth2/access_token';
     var code = req.query.code;
-    if(cache[code]){
+    var ACCESS_TOKEN_KEY = "accessToken";
+    if (cache.get(ACCESS_TOKEN_KEY)) {
         console.log('cache value');
-        res.json(cache[code]);
-    }else {
+        res.json(cache.get(ACCESS_TOKEN_KEY));
+    } else {
         rp({
             uri: uri,
             qs: req.query,
@@ -22,8 +23,10 @@ router.get('/accessToken', function (req, res) {
             json: true
         }).then(
             function (body) {
-			   cache.put(code.toString(),body);
-               res.json(body);
+                cache.put(ACCESS_TOKEN_KEY.toString(), body, 7200 * 1000, function (key, value) {
+                    console.log(ACCESS_TOKEN_KEY +'is expires');
+                })
+                res.json(body);
             }
         ).catch(function (err) {
             // handleError(res, err)
@@ -33,7 +36,7 @@ router.get('/accessToken', function (req, res) {
 
 });
 router.get('/getUserInfo', function (req, res) {
-    var  uri = ' https://api.weixin.qq.com/sns/userinfo';
+    var uri = ' https://api.weixin.qq.com/sns/userinfo';
     rp({
         uri: uri,
         qs: req.query,
