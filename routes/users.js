@@ -22,15 +22,10 @@ router.get('/accessToken', function (req, res) {
             json: true
         }).then(
             function (body) {
-               return res.json(body);
+			   cache.put(code.toString(),body);
+               res.json(body);
             }
-        ).then(function (d) {
-            console.log("-=======body=============");
-            console.log(d);
-            console.log("-=======body=============");
-            // cache.put(code.toString(),d);
-        })
-            .catch(function (err) {
+        ).catch(function (err) {
             // handleError(res, err)
             console.log(err);
         });
