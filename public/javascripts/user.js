@@ -16,8 +16,6 @@ $(document).ready(function () {
     }).done(function (d) {
         console.log(d);
         window.tokenMeta = d;//缓存token
-        return d;
-    }).done(function (d) {
         $.ajax({
             url: '/users/getUserInfo',
             data: {
@@ -33,6 +31,7 @@ $(document).ready(function () {
             $('#nickname').text(d.nickname);
             $('#sex').text(d.sex==1?'男':'女');
         })
+
     }).fail(function (err) {
         console.log(err);
     })
