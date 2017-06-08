@@ -23,9 +23,11 @@ router.get('/accessToken', function (req, res) {
             json: true
         }).then(
             function (body) {
-                cache.put(ACCESS_TOKEN_KEY.toString(), body, 7200 * 1000, function (key, value) {
-                    console.log(ACCESS_TOKEN_KEY +'is expires');
-                })
+                if(!body.errcode){
+                    cache.put(ACCESS_TOKEN_KEY.toString(), body, 7200 * 1000, function (key, value) {
+                        console.log(ACCESS_TOKEN_KEY +'is expires');
+                    })
+                }
                 res.json(body);
             }
         ).catch(function (err) {
