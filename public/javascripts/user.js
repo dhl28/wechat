@@ -31,6 +31,15 @@ $(document).ready(function () {
             $('#nickname').text(d.nickname);
             $('#sex').text(d.sex==1?'男':'女');
         })
+        //获取jsapiTicket
+        $.ajax({
+            url: '/users/jsapiTicket',
+            data: {
+                url:window.location.href
+            }
+        }).then(function (d) {
+            console.log(d)
+        })
 
     }).fail(function (err) {
         console.log(err);
