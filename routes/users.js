@@ -40,13 +40,13 @@ router.get('/accessToken', function (req, res) {
 });
 router.get('/jsapiTicket', function (req, res) {
     var uri = 'https://api.weixin.qq.com/cgi-bin/ticket/getticket';
-    var accessToken = cache.get(constant.ACCESS_TOKEN_KEY);
+    var apiAccessToken = cache.get(constant.API_ACCESS_TOKEN);
     if (cache.get(constant.JS_API_TICKET)) {
         console.log('cache value');
         res.json(cache.get(constant.JS_API_TICKET));
     } else {
         var params = {
-            'access_token':req.query.accessToken,
+            'access_token':apiAccessToken.access_token,
             'type':'jsapi'
         }
         rp({

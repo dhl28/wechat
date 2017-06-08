@@ -5,5 +5,6 @@ var constant = {
     'host': 'http://123.207.143.129',
     'ACCESS_TOKEN_KEY': 'accessToken',
     'JS_API_TICKET': 'jsapiTicket',
+    'API_ACCESS_TOKEN': 'apiAccessToken',
 };
 module.exports = constant;

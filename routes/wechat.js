@@ -6,12 +6,39 @@ var router = express.Router();
 var wechat = require('wechat');
 var config = require('../config.js');
 var constant = require('../constant.js');
+var cache = require('memory-cache');
+var rp = require('request-promise');
+
 router.use('/', wechat(config, function (req, res, next) {
     // 微信输入信息都在req.weixin上
     var message = req.weixin;
     console.log("==========================req.weixin start==================");
     console.log(message);
     console.log("==========================req.weixin end==================");
+    //获取API_ACCESS_TOKEN
+    var apiAccessToken = cache.get(constant.API_ACCESS_TOKEN);
+    if(!apiAccessToken){
+        var  uri ='https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='+config.appid+'&secret='+config.appsecret;
+        rp({
+            uri: uri,
+            useQuerystring: true,
+            method: 'GET',
+            json: true
+        }).then(
+            function (body) {
+                if(!body.errcode){
+                    cache.put(constant.API_ACCESS_TOKEN, body, 7200 * 1000, function (key, value) {
+                        console.log(constant.API_ACCESS_TOKEN +'is expires');
+                    })
+                }
+                console.log(body)
+                res.json(body);
+            }
+        ).catch(function (err) {
+            // handleError(res, err)
+            console.log(err);
+        });
+    }
     if (message.FromUserName === 'diaosi') {
         // 回复屌丝(普通回复)
         res.reply('hehe');
