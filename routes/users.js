@@ -32,5 +32,22 @@ router.get('/accessToken', function (req, res) {
     }
 
 });
+router.get('/getUserInfo', function (req, res) {
+    var  uri = ' https://api.weixin.qq.com/sns/userinfo';
+    rp({
+        uri: uri,
+        qs: req.query,
+        useQuerystring: true,
+        method: 'GET',
+        json: true
+    }).then(
+        function (body) {
+            res.json(body);
+        }
+    ).catch(function (err) {
+        console.log(err);
+    });
+
+});
 
 module.exports = router;
