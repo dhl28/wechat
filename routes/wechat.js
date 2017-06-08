@@ -32,7 +32,6 @@ router.use('/', wechat(config, function (req, res, next) {
                     })
                 }
                 console.log(body)
-                res.json(body);
             }
         ).catch(function (err) {
             // handleError(res, err)

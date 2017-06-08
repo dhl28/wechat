@@ -3,6 +3,7 @@ var router = express.Router();
 var rp = require('request-promise');
 var cache = require('memory-cache');
 var constant = require('../constant.js');
+var sign = require('../sign.js');
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
@@ -43,7 +44,7 @@ router.get('/jsapiTicket', function (req, res) {
     var apiAccessToken = cache.get(constant.API_ACCESS_TOKEN);
     if (cache.get(constant.JS_API_TICKET)) {
         console.log('cache value');
-        res.json(cache.get(constant.JS_API_TICKET));
+        res.json( sign(cache.get(constant.JS_API_TICKET).ticket,req.query.url));
     } else {
         var params = {
             'access_token':apiAccessToken.access_token,
@@ -62,7 +63,7 @@ router.get('/jsapiTicket', function (req, res) {
                         console.log(constant.JS_API_TICKET +'is expires');
                     })
                 }
-                res.json(body);
+                res.json( sign(body.ticket,req.query.url));
             }
         ).catch(function (err) {
             // handleError(res, err)
