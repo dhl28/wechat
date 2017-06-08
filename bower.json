@@ -1,0 +1,21 @@
+{
+  "name": "wechatApp",
+  "description": "",
+  "main": "",
+  "authors": [
+    "dhl28 <dhl28@126.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dhl28/wechat",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
