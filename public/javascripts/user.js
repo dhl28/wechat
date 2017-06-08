@@ -35,6 +35,7 @@ $(document).ready(function () {
         $.ajax({
             url: '/users/jsapiTicket',
             data: {
+                accessToken:d.access_token,
                 url:window.location.href
             }
         }).then(function (d) {

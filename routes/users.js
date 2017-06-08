@@ -46,7 +46,7 @@ router.get('/jsapiTicket', function (req, res) {
         res.json(cache.get(constant.JS_API_TICKET));
     } else {
         var params = {
-            'access_token':accessToken,
+            'access_token':req.query.accessToken,
             'type':'jsapi'
         }
         rp({
