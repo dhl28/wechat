@@ -27,7 +27,8 @@ router.get('/accessToken', function (req, res) {
                 res.json(body);
             }
         ).catch(function (err) {
-            handleError(res, err)
+            // handleError(res, err)
+            console.log(err);
         });
     }
 
