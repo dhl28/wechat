@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var rp = require('request-promise');
 var cache = require('memory-cache');
-var constant = require('constant.js');
+var constant = require('../constant.js');
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
