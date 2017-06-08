@@ -27,7 +27,7 @@ $(document).ready(function () {
             console.log('--------userInfo start--------');
             console.log(d);
             console.log('--------userInfo end--------');
-            $('#userInfoDetail').text(d);
+            $('#userInfoDetail').text(JSON.stringify(d));
             $('#nickname').text(d.nickname);
             $('#sex').text(d.sex==1?'男':'女');
         })
@@ -36,7 +36,8 @@ $(document).ready(function () {
         console.log(err);
     })
     //add event
-    $('#viewUserInfoDetail').on('click',function () {
-        $("userInfoDetail").toggle();
+    $('#viewUserInfoDetail').on('click',function (e) {
+        $("#userInfoDetail").toggle();
+        console.log('click event trigger');
     })
 })
