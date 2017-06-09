@@ -13,9 +13,12 @@ router.get('/accessToken', function (req, res) {
     var uri = ' https://api.weixin.qq.com/sns/oauth2/access_token';
     var code = req.query.code;
     var ACCESS_TOKEN_KEY = "accessToken";
-    if (cache.get(ACCESS_TOKEN_KEY)) {
-        console.log('cache value');
-        res.json(cache.get(ACCESS_TOKEN_KEY));
+    var  userAccessTokenInfo = cache.get(ACCESS_TOKEN_KEY);
+    if (userAccessTokenInfo) {
+        console.log('======================userAccessTokenInfo cache value start===================');
+        console.log(userAccessTokenInfo);
+        console.log('=======================userAccessTokenInfo cache value end =====================');
+        res.json(userAccessTokenInfo);
     } else {
         rp({
             uri: uri,
@@ -30,6 +33,9 @@ router.get('/accessToken', function (req, res) {
                         console.log(ACCESS_TOKEN_KEY +'is expires');
                     })
                 }
+                console.log('======================userAccessTokenInfo value start===================');
+                console.log(body);
+                console.log('=======================userAccessTokenInfo value end =====================');
                 res.json(body);
             }
         ).catch(function (err) {
