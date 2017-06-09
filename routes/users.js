@@ -13,40 +13,28 @@ router.get('/accessToken', function (req, res) {
     var uri = ' https://api.weixin.qq.com/sns/oauth2/access_token';
     var code = req.query.code;
     console.log("=================================code:"+code);
-    var ACCESS_TOKEN_KEY = "accessToken";
-    var  userAccessTokenInfo = cache.get(ACCESS_TOKEN_KEY);
-    if (userAccessTokenInfo) {
-        console.log('======================userAccessTokenInfo cache value start===================');
-        console.log(userAccessTokenInfo);
-        console.log('=======================userAccessTokenInfo cache value end =====================');
-        res.json(userAccessTokenInfo);
-    } else {
-        console.log('======================userAccessTokenInfo params start===================');
-        console.log(req.query);
-        console.log('======================userAccessTokenInfo params end===================');
-        rp({
-            uri: uri,
-            qs: req.query,
-            useQuerystring: true,
-            method: 'GET',
-            json: true
-        }).then(
-            function (body) {
-                if(!body.errcode){
-                    cache.put(ACCESS_TOKEN_KEY.toString(), body, 7200 * 1000, function (key, value) {
-                        console.log(ACCESS_TOKEN_KEY +'is expires');
-                    })
-                }
-                console.log('======================userAccessTokenInfo value start===================');
-                console.log(body);
-                console.log('=======================userAccessTokenInfo value end =====================');
-                res.json(body);
+    rp({
+        uri: uri,
+        qs: req.query,
+        useQuerystring: true,
+        method: 'GET',
+        json: true
+    }).then(
+        function (body) {
+            if(!body.errcode){
+                cache.put(ACCESS_TOKEN_KEY.toString(), body, 7200 * 1000, function (key, value) {
+                    console.log(ACCESS_TOKEN_KEY +'is expires');
+                })
             }
-        ).catch(function (err) {
-            // handleError(res, err)
-            console.log(err);
-        });
-    }
+            console.log('======================userAccessTokenInfo value start===================');
+            console.log(body);
+            console.log('=======================userAccessTokenInfo value end =====================');
+            res.json(body);
+        }
+    ).catch(function (err) {
+        // handleError(res, err)
+        console.log(err);
+    });
 
 });
 router.get('/jsapiTicket', function (req, res) {
