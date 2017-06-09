@@ -12,6 +12,7 @@ router.get('/', function (req, res, next) {
 router.get('/accessToken', function (req, res) {
     var uri = ' https://api.weixin.qq.com/sns/oauth2/access_token';
     var code = req.query.code;
+    console.log("=================================code:"+code);
     var ACCESS_TOKEN_KEY = "accessToken";
     var  userAccessTokenInfo = cache.get(ACCESS_TOKEN_KEY);
     if (userAccessTokenInfo) {
