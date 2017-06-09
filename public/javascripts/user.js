@@ -29,14 +29,14 @@ $(document).ready(function () {
             console.log('--------userInfo end--------');
             $('#userInfoDetail').text(JSON.stringify(d));
             $('#nickname').text(d.nickname);
-            $('#sex').text(d.sex==1?'男':'女');
+            $('#sex').text(d.sex == 1 ? '男' : '女');
         })
         //获取jsapiTicket
         $.ajax({
             url: '/users/jsapiTicket',
             data: {
-                accessToken:d.access_token,
-                url:window.location.href
+                accessToken: d.access_token,
+                url: window.location.href
             }
         }).then(function (d) {
             console.log(d);
@@ -44,12 +44,12 @@ $(document).ready(function () {
             wx.config({
                 debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
                 appId: constant.appid, // 必填，公众号的唯一标识
-                timestamp:d.timestamp , // 必填，生成签名的时间戳
+                timestamp: d.timestamp, // 必填，生成签名的时间戳
                 nonceStr: d.nonceStr, // 必填，生成签名的随机串
                 signature: d.signature,// 必填，签名，见附录1
-                jsApiList: ['chooseImage','getLocation','openLocation'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                jsApiList: constant.API_LIST // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
             });
-            wx.ready(function(){
+            wx.ready(function () {
                 console.log('wx jsapi is ready');
             });
         })
@@ -58,20 +58,39 @@ $(document).ready(function () {
         console.log(err);
     })
     //add event
-    $('#viewUserInfoDetail').on('click',function (e) {
+    $('#viewUserInfoDetail').on('click', function (e) {
         $("#userInfoDetail").toggle();
         console.log('click event trigger');
     })
-      $('#chooseImage').on('click',function (e) {
-          wx.chooseImage({
-              // count: 1, // 默认9
-              sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-              sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-              success: function (res) {
-                  var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
-                  $('#localIds').html(JSON.stringify(res.localIds));
-              }
-          });
+    $('#chooseImage').on('click', function (e) {
+        wx.chooseImage({
+            // count: 1, // 默认9
+            sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+            sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+            success: function (res) {
+                var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+                $('#localIds').html(JSON.stringify(res.localIds));
+            }
+        });
     })
+    $('#getLocation').on('click', function (e) {
+        wx.getLocation({
+            type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+            success: function (res) {
+                $('#locationInfo').html(JSON.stringify(res));
+            }
+        });
+    })
+    $('#openLocation').on('click', function (e) {
+        wx.openLocation({
+            latitude: 0, // 纬度，浮点数，范围为90 ~ -90
+            longitude: 0, // 经度，浮点数，范围为180 ~ -180。
+            name: '', // 位置名
+            address: '', // 地址详情说明
+            scale: 1, // 地图缩放级别,整形值,范围从1~28。默认为最大
+            infoUrl: '' // 在查看位置界面底部显示的超链接,可点击跳转
+        });
+    })
+
 
 })
