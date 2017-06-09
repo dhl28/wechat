@@ -20,6 +20,9 @@ router.get('/accessToken', function (req, res) {
         console.log('=======================userAccessTokenInfo cache value end =====================');
         res.json(userAccessTokenInfo);
     } else {
+        console.log('======================userAccessTokenInfo params start===================');
+        console.log(req.query);
+        console.log('======================userAccessTokenInfo params end===================');
         rp({
             uri: uri,
             qs: req.query,
