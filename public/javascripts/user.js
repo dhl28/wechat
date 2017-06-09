@@ -83,8 +83,8 @@ $(document).ready(function () {
     })
     $('#openLocation').on('click', function (e) {
         wx.openLocation({
-            latitude: 116.23, // 纬度，浮点数，范围为90 ~ -90
-            longitude: 39.54, // 经度，浮点数，范围为180 ~ -180。
+            latitude: 39.54, // 纬度，浮点数，范围为90 ~ -90
+            longitude: 116.23, // 经度，浮点数，范围为180 ~ -180。
             name: ' 北京天安门广场', // 位置名
             address: '天安门坐落在中國北京市中心，故宫的南端，与天安门广场隔长安街相望，是明清两代北京皇城的正门', // 地址详情说明
             scale: 15, // 地图缩放级别,整形值,范围从1~28。默认为最大
