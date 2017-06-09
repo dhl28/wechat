@@ -11,7 +11,7 @@ $(document).ready(function () {
             appid: constant.appid,
             secret: constant.appsecret,
             code: code,
-            grant_type: 'authoreization_code'
+            grant_type: 'authorization_code'
         }
     }).done(function (d) {
         console.log(d);
