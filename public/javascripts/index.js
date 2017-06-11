@@ -5,8 +5,8 @@
 
 // 1. Define route components.
 // These can be imported from other files
-const User = {template: '<user></user>'}
-const Bar = {template: '<div>bar</div>'}
+var User = {template: '<user></user>'}
+var Bar = {template: '<div>bar</div>'}
 
 var data = {
     msg:'this is user component'
@@ -18,7 +18,7 @@ var data = {
 // either be an actual component constructor created via
 // Vue.extend(), or just a component options object.
 // We'll talk about nested routes later.
-const routes = [
+var routes = [
     {path: '/users', component: User},
     {path: '/bar', component: Bar}
 ]
@@ -26,7 +26,7 @@ const routes = [
 // 3. Create the router instance and pass the `routes` option
 // You can pass in additional options here, but let's
 // keep it simple for now.
-const router = new VueRouter({
+var router = new VueRouter({
     // mode: 'history',
     routes: routes
 })
@@ -34,7 +34,7 @@ const router = new VueRouter({
 // 4. Create and mount the root instance.
 // Make sure to inject the router with the router option to make the
 // whole app router-aware.
-const app = new Vue({
+var app = new Vue({
     router: router,
     methods: {
         linkTo: function (url) {
