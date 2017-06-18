@@ -20,6 +20,7 @@
         <!-- <router-link> will be rendered as an `<a>` tag by default -->
         <a v-on:click="linkTo('/users')" href="javascript:void(0)">Go to Users</a>
         <router-link to="/bar">Go to Bar</router-link>
+        <router-link to="/config">Go to config</router-link>
     </p>
     <!-- route outlet -->
     <!-- component matched by the route will render here -->
@@ -62,9 +63,29 @@
     </form>
 
 </script>
+<script type="text/x-template" id="config-tpl">
+    <div>
+        <h1> 微信公众号配置管理界面 </h1>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-1 control-label">菜单json数据</label>
+            </div>
+            <div class="form-group">
+                <div class=" col-sm-6 col-sm-offset-1">
+                    <textarea id="menuContent" class="form-control" rows="10"></textarea>
+                </div>
+            </div>
+            <button type="button" class="btn btn-success"  @click="createMenu()">创建自定义菜单</button>
+
+        </form>
+    </div>
+
+
+</script>
 <script src="/public/javascripts/constant.js"></script>
 <script src="/public/javascripts/util.js"></script>
-<script src="/public/javascripts/userComponent.js" ></script>
+<script src="/public/javascripts/component/userComponent.js" ></script>
+<script src="/public/javascripts/component/configComponent.js" ></script>
 <script src="/public/javascripts/index.js" ></script>
 </body>
 </html>

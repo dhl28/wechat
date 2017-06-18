@@ -6,6 +6,7 @@
 // 1. Define route components.
 // These can be imported from other files
 var User = {template: '<user></user>'}
+var Config = {template: '<config></config>'}
 var Bar = {template: '<div>bar</div>'}
 
 var data = {
@@ -20,7 +21,8 @@ var data = {
 // We'll talk about nested routes later.
 var routes = [
     {path: '/users', component: User},
-    {path: '/bar', component: Bar}
+    {path: '/bar', component: Bar},
+    {path: '/config', component: Config},
 ]
 
 // 3. Create the router instance and pass the `routes` option
