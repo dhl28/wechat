@@ -12,14 +12,12 @@ router.use('/menu',function (req, res) {
     var apiAccessToken = cache.get(constant.API_ACCESS_TOKEN);
     var  creteMenuUri ='https://api.weixin.qq.com/cgi-bin/menu/create?access_token=';
     var menu = constant.menu;
+    var menu = req.body;
     console.log('create menu');
     console.log(' =============menu content start===========================');
     console.log(menu);
     console.log(' =============menu content end===========================');
 
-
-
-    // var menu = req.body;
     if (apiAccessToken) {
         console.log('create menu===cache token=======');
         rp({

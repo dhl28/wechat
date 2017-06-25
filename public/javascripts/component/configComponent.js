@@ -11,12 +11,13 @@ configModal.methods ={
     createMenu:function () {
         console.log('createMenu event trigger');
         //获取jsapiTicket
-        var menuContent = $('#menuContent').val();
-        debugger;
+        var menuContent = JSON.parse($('#menuContent').val());
         $.ajax({
             url: '/wechatConfig/menu',
             type:'post',
-            data: menuContent,
+            contentType: "application/json; charset=utf-8",
+            dataType:'json',
+            data: JSON.stringify(menuContent),
         }).then(function (d) {
             console.log(d);
         })
