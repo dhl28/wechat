@@ -1,14 +1,13 @@
 /**
- * Created by dhl on 2017/6/6.
+ * Created by douhongliang on 2017/7/2.
  */
-var express = require('express');
-var router = express.Router();
-var config = require('../config.js');
-var constant = require('../constant.js');
+var config = require('../../config.js');
+var constant = require('../../constant.js');
 var cache = require('memory-cache');
 var rp = require('request-promise');
 
-router.use('/menu',function (req, res) {
+//微信菜单配置
+function menuConfig(req, res) {
     var apiAccessToken = cache.get(constant.API_ACCESS_TOKEN);
     var  creteMenuUri ='https://api.weixin.qq.com/cgi-bin/menu/create?access_token=';
     var menu = constant.menu;
@@ -70,5 +69,9 @@ router.use('/menu',function (req, res) {
             console.log(err);
         });
     }
-});
-module.exports = router;
+}
+
+var model = {
+    menuConfig:menuConfig
+}
+module.exports = model;

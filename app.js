@@ -7,9 +7,6 @@ var bodyParser = require('body-parser');
 var ejs = require('ejs');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
-var wechat = require('./routes/wechat');
-var wechatConfig = require('./routes/wechatConfig');
 
 var app = express();
 //set app engine
@@ -28,11 +25,7 @@ app.use(cookieParser());
 app.use('/public',express.static(path.join(__dirname, 'public')));
 app.use('/bower_components',express.static(path.join(__dirname, 'bower_components')));
 // app.use(express.static(path.join(__dirname, 'views')));
-
-app.use('/', routes);
-app.use('/users', users);
-app.use('/wechat',wechat);
-app.use('/wechatConfig',wechatConfig);
+require('./routes')(app)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
