@@ -111,6 +111,8 @@ html, body {
     background-color: #ff7043;
     padding: 0.1rem 0.4rem;
     color: #ffffff;
+    margin: auto;
+    display: block;
 }
 
 .control-wrapper {
