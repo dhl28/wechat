@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>完善必要资料</title>
+
+    <link href="/public/stylesheets/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/public/stylesheets/register/provider-step2.css" rel="stylesheet" type="text/css"/>
+
+    <!-- 将flexible源码插入这里 -->
+    <script src="/public/libs/flexible/flexible.js"></script>
+    <script src="/public/libs/flexible/flexible_css.js"></script>
+    <script src="/bower_components/vue/dist/vue.js"></script>
+</head>
+<body>
+<div class="content">
+    <div class="form-group">
+        <label class="control-label">头&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;像</label>
+    </div>
+    <div class="form-group">
+        <label class="control-label">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label>
+        <input type="text" class="form-control" placeholder="输入姓名">
+    </div>
+    <div class="form-group">
+        <label class="control-label">身份证号</label>
+        <input type="text" class="form-control" placeholder="请输入您的身份证号">
+    </div>
+    <div class="form-group">
+        <label class="control-label">出生年月</label>
+        <select class="control-select select-year">
+            <option>2000</option>
+            <option>1999</option>
+            <option>1998</option>
+            <option>1997</option>
+            <option>1996</option>
+        </select>
+        <select class="control-select select-month">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label class="control-label">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</label>
+        <div class="control-wrapper">
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" value="option1">男饭主
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" value="option1">女饭主
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址</label>
+        <div class="control-wrapper">
+            <div class="location-select-wrapper">
+                <select class="control-select select-province">
+                    <option>北京市</option>
+                </select>
+                <select class="control-select select-city">
+                    <option>北京市</option>
+                </select>
+                <select class="control-select select-area">
+                    <option>海淀区</option>
+                    <option>朝阳区</option>
+                    <option>昌平区</option>
+                </select>
+            </div>
+            <div class="district">
+                <select class="control-select select-district">
+                    <option>小区1</option>
+                    <option>小区2</option>
+                    <option>小区3</option>
+                </select>
+                <button type="button" class="btn btn-location" @click="location()">定位</button>
+            </div>
+            <div class="location-detail">
+                <input class="form-control" type="text" placeholder="具体到门牌号">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label">擅长菜系</label>
+        <div class="control-wrapper">
+            <div>
+                <select class="control-select select-expert-in">
+                    <option>川菜</option>
+                    <option>鲁菜</option>
+                    <option>粤菜</option>
+                    <option>淮扬菜</option>
+                    <option>云南菜</option>
+                </select>
+            </div>
+            <div>
+                <textarea class="form-control expert-in-des" rows="5" placeholder="请输入您的拿手好菜"></textarea>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <button type="button" class="btn btn-next">完成</button>
+    </div>
+
+</div>
+<script src="/public/javascripts/register/provider-step2.js" ></script>
+</body>
+</body>
+</html>

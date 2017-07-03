@@ -9,6 +9,8 @@ module.exports = function (app) {
     app.use('/wechat',require('./wechat'))
     app.use('/wechat-config',require('./wechat-config'))
     app.use('/users',require('./users'))
+    app.use('/register',require('./register'))
+
     app.use('/', function(req, res, next) {
         res.render('index.html');
     });

@@ -6,10 +6,14 @@ var app = new Vue({
     el: '#app',
     data: {
         msg:'this is index html',
-        todos: [
-            { text: '学习 JavaScript' },
-            { text: '学习 Vue' },
-            { text: '整个牛项目' }
-        ]
+    },
+    methods:{
+        goHome:function () {
+            window.location.href='/';
+        },
+        goProviderRegister:function () {
+            window.location.href='/register/provider-step1';
+        }
     }
+
 })

@@ -1,27 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+
+    <title>微信服务号功能导航</title>
     <link href="/public/stylesheets/style.css" rel="stylesheet" type="text/css"/>
-    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link href="/public/stylesheets/index.css" rel="stylesheet" type="text/css"/>
+    <!-- 将flexible源码插入这里 -->
+    <script src="/public/libs/flexible/flexible.js"></script>
+    <script src="/public/libs/flexible/flexible_css.js"></script>
     <script src="/bower_components/vue/dist/vue.js"></script>
 </head>
 <body>
-<div id="app" >
-    <h1 >{{msg}}</h1>
-    <ol>
-        <li v-for="todo in todos">
-            {{ todo.text }}
-        </li>
-    </ol>
-</div>
+<div id="app">
+    <a @click="goHome()">首页</a>
+    <a @click="goProviderRegister()">饭主注册</a>
 
-<script src="/public/javascripts/constant.js"></script>
-<script src="/public/javascripts/util.js"></script>
-<script src="/public/javascripts/index.js" ></script>
+</div>
+<script src="/public/javascripts/index.js"></script>
 </body>
 </html>
