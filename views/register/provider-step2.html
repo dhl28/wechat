@@ -1,115 +1,90 @@
 <!DOCTYPE html>
-<html>
+<!-- saved from url=(0040)http://page.kuaidadi.com/m/djsignup.html -->
+<html lang="zh-cn">
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
-    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
     <title>完善必要资料</title>
-
-    <link href="/public/stylesheets/style.css" rel="stylesheet" type="text/css"/>
-    <link href="/public/stylesheets/register/provider-step2.css" rel="stylesheet" type="text/css"/>
-
-    <!-- 将flexible源码插入这里 -->
-    <script src="/public/libs/flexible/flexible.js"></script>
-    <script src="/public/libs/flexible/flexible_css.js"></script>
-    <script src="/bower_components/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="/public/stylesheets/register/provider-step2.css" media="all">
 </head>
 <body>
-<div class="content">
-    <div class="form-group">
-        <label class="control-label">头&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;像</label>
-    </div>
-    <div class="form-group">
-        <label class="control-label">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label>
-        <input type="text" class="form-control" placeholder="输入姓名">
-    </div>
-    <div class="form-group">
-        <label class="control-label">身份证号</label>
-        <input type="text" class="form-control" placeholder="请输入您的身份证号">
-    </div>
-    <div class="form-group">
-        <label class="control-label">出生年月</label>
-        <select class="control-select select-year">
-            <option>2000</option>
-            <option>1999</option>
-            <option>1998</option>
-            <option>1997</option>
-            <option>1996</option>
-        </select>
-        <select class="control-select select-month">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label class="control-label">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</label>
-        <div class="control-wrapper">
-            <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" value="option1">男饭主
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" value="option1">女饭主
-            </label>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址</label>
-        <div class="control-wrapper">
-            <div class="location-select-wrapper">
-                <select class="control-select select-province">
-                    <option>北京市</option>
-                </select>
-                <select class="control-select select-city">
-                    <option>北京市</option>
-                </select>
-                <select class="control-select select-area">
-                    <option>海淀区</option>
-                    <option>朝阳区</option>
-                    <option>昌平区</option>
-                </select>
-            </div>
-            <div class="district">
-                <select class="control-select select-district">
-                    <option>小区1</option>
-                    <option>小区2</option>
-                    <option>小区3</option>
-                </select>
-                <button type="button" class="btn btn-location" @click="location()">定位</button>
-            </div>
-            <div class="location-detail">
-                <input class="form-control" type="text" placeholder="具体到门牌号">
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label">擅长菜系</label>
-        <div class="control-wrapper">
-            <div>
-                <select class="control-select select-expert-in">
-                    <option>川菜</option>
-                    <option>鲁菜</option>
-                    <option>粤菜</option>
-                    <option>淮扬菜</option>
-                    <option>云南菜</option>
-                </select>
-            </div>
-            <div>
-                <textarea class="form-control expert-in-des" rows="5" placeholder="请输入您的拿手好菜"></textarea>
-            </div>
-        </div>
+<div class="container">
+    <div class="ui-container">
+        <div class="ui-contentbar">
+            <div class="ui-title"><i class="iconfont icon-data"></i>基本信息录入</div>
+            <div class="ui-separator"></div>
+            <div class="ui-content">
+                <ul class="form">
+                    <li><span class="tit">姓名：</span>
+                        <input class="ui-input J_data_check" name="ipt-name" id="ipt-name"
+                               type="text" maxlength="20">
+                        <span class="ui-warming-note">输入有误，请重新填写</span>
+                    </li>
+                    <li><span class="tit">身份证号码：</span>
+                        <input class="ui-input J_data_check" name="ipt-card"
+                               id="ipt-card" type="text" maxlength="18">
+                        <span class="ui-warming-note">输入有误，请重新填写</span></li>
+                    <li><span class="tit">出生年月：</span>
+                        <span class="ui-input ui-input-select" id="J_jiguan_select">
+                            <span class="J_jiguan"></span>
+                            <span class="ui-select-down">
+                                <i class="iconfont icon-down"></i>
+                            </span>
+                        </span>
+                    </li>
+                    <li><span class="tit">性别：</span>
+                        <span class="ui-input ui-input-select ui-no-border" id="ipt-fulltime">
+                            <div class="ui-form-item ui-form-item-radio">
+                                <div class="ui-radio">
+                                    <label for="radio21" data-target="t_basework_2">男</label>
+                                    <input class="J_radio" data-target="t_basework_2" type="radio" name="fulltime"
+                                           id="radio21" value="1">
+                                </div>
+                                <div class="ui-radio">
+                                    <label for="radio22" data-target="t_basework_1">女</label>
+                                    <input class="J_radio" data-target="t_basework_1" type="radio" name="fulltime"
+                                           id="radio22" value="0">
+                                </div>
+                            </div>
+                        </span>
+                    </li>
+                    <li><span class="tit">所在城市：</span>
+                        <span class="ui-input ui-input-select" id="J_city_select">
+                            <span class="J_city" data-id="110100" data-value="北京市" data-status="1">北京北京市</span>
+                            <span class="ui-select-down"><i class="iconfont icon-down"></i></span>
+                        </span>
+                        <span class="ui-warming-note" style="display: none;">输入有误，请重新填写</span></li>
+                    <li><span class="tit">详细地址：</span>
+                        <input class="ui-input J_data_check" id="ipt-cardnumber" type="tel" maxlength="12">
+                        <span class="ui-warming-note">输入有误，请重新填写</span>
+                    </li>
+                    <li><span class="tit">擅长菜系：</span>
+                        <span class="ui-input ui-input-select" id="J_date_getcard_select">
+                            <span class="J_date_getcard"></span>
+                            <span class="ui-select-down">
+                                <i class="iconfont icon-down"></i>
+                            </span>                              </span>
+                        <span class="ui-warming-note">输入有误，请重新填写</span>
+                    </li>
+                    <li><span class="tit">拿手好菜：</span>
+                        <textarea class="ui-input J_data_check" id="ipt-cardnumber" style="height: 50px" type="tel"
+                                  maxlength="12"></textarea>
+                    </li>
 
-    </div>
-
-    <div class="form-group">
-        <button type="button" class="btn btn-next">完成</button>
+                </ul>
+                <p class="ui-botton-bar">
+                    <a href="javascript:;" class="ui-btn ui-orange J_submit_evaluate"
+                       disabled="disabled">提交报名</a>
+                </p>
+            </div>
+        </div>
     </div>
 
 </div>
-<script src="/public/javascripts/register/provider-step2.js" ></script>
-</body>
 </body>
 </html>

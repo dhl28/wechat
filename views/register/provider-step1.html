@@ -1,38 +1,47 @@
 <!DOCTYPE html>
-<html>
+<!-- saved from url=(0047)http://page.kuaidadi.com/m/djrecruitmobile.html -->
+<html lang="zh-cn">
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
-    <meta content="telephone=no,email=no" name="format-detection">
-
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
     <title>注册饭主</title>
-    <link href="/public/stylesheets/style.css" rel="stylesheet" type="text/css"/>
-    <link href="/public/stylesheets/register/provider-step1.css" rel="stylesheet" type="text/css"/>
-
-    <!-- 将flexible源码插入这里 -->
-    <script src="/public/libs/flexible/flexible.js"></script>
-    <script src="/public/libs/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="/public/stylesheets/register/provider-step1.css" media="all">
     <script src="/bower_components/vue/dist/vue.js"></script>
 </head>
 <body>
-<div class="content">
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="输入您的昵称">
-    </div>
-    <div class="form-group control-phone">
-        <input type="text" class="form-control" placeholder="输入您的手机号码">
-        <button class="btn btn-get-code">获取验证码</button>
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="输入验证码">
-    </div>
+<div class="container">
+    <div class="ui-container">
+        <div class="ui-contentbar">
+            <div class="ui-title"><i class="iconfont icon-data"></i>请仔细填写要验证的手机号码</div>
+            <div class="ui-separator"></div>
+            <div class="ui-content">
+                <div class="J_warming ui-warming-bar"></div>
+                <div class="dr-phone-ipt"><input id="J_Phone" class="dr-input dr-phone-input" type="tel" maxlength="11"
+                                                 placeholder="输入您的手机号"></div>
+                <div class="dr-code">
+                    <div class="dr-code-ipt"><input id="J_Code" class="dr-input dr-code-input" type="tel" maxlength="4"
+                                                    placeholder="输入验证码"></div>
+                    <a id="J_SubmitCode" class="dr-code-submit">发送验证码</a></div>
+                <a id="J_Submit" class="dr-submit" @click="next()">下一步</a></div>
+            <footer class="J_desc">
+                <ul class="disc">
+                    <li>重要提醒：这里可能出现三种情况<br>
+                        1.新电话号码，正常注册<br>
+                        2.<span class="orange">已经提交了注册信息还未审核通过的</span>&nbsp;，再次注册时，提示正在审核，耐心
+                        等待或者联系客服<br>
+                        3.已经注册的账号，提示手机号码已经注册，请查看手机号码是否与当前微信绑定
+                    </li>
 
-    <div class="form-group">
-        <button type="button" class="btn btn-next" @click="next()">>>继续</button>
+                </ul>
+            </footer>
+        </div>
     </div>
-
 </div>
-<script src="/public/javascripts/register/provider-step1.js" ></script>
+<script src="/public/javascripts/register/provider-step1.js"></script>
 </body>
 </html>
