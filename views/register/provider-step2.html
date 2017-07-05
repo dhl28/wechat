@@ -11,6 +11,9 @@
     <meta name="description" content="">
     <title>完善必要资料</title>
     <link rel="stylesheet" href="/public/stylesheets/register/provider-step2.css" media="all">
+    <link rel="stylesheet" href="/public/libs/multi-picker/MultiPicker.css" media="all">
+    <link rel="stylesheet" href="/public/libs/date-picker/DateSelector.css" media="all">
+
 </head>
 <body>
 <div class="container">
@@ -29,13 +32,8 @@
                         <input class="ui-input J_data_check" name="ipt-card"
                                id="ipt-card" type="text" maxlength="18">
                         <span class="ui-warming-note">输入有误，请重新填写</span></li>
-                    <li><span class="tit">出生年月：</span>
-                        <span class="ui-input ui-input-select" id="J_jiguan_select">
-                            <span class="J_jiguan"></span>
-                            <span class="ui-select-down">
-                                <i class="iconfont icon-down"></i>
-                            </span>
-                        </span>
+                    <li><span class="tit">出生日期：</span>
+                        <input class="ui-input" id="birthday" type="text" disabled>
                     </li>
                     <li><span class="tit">性别：</span>
                         <span class="ui-input ui-input-select ui-no-border" id="ipt-fulltime">
@@ -54,21 +52,14 @@
                         </span>
                     </li>
                     <li><span class="tit">所在城市：</span>
-                        <span class="ui-input ui-input-select" id="J_city_select">
-                            <span class="J_city" data-id="110100" data-value="北京市" data-status="1">北京北京市</span>
-                            <span class="ui-select-down"><i class="iconfont icon-down"></i></span>
-                        </span>
+                        <input class="ui-input J_data_check" id="J_city_select" type="text" disabled>
                         <span class="ui-warming-note" style="display: none;">输入有误，请重新填写</span></li>
                     <li><span class="tit">详细地址：</span>
                         <input class="ui-input J_data_check" id="ipt-cardnumber" type="text">
                         <span class="ui-warming-note">输入有误，请重新填写</span>
                     </li>
                     <li><span class="tit">擅长菜系：</span>
-                        <span class="ui-input ui-input-select" id="J_date_getcard_select">
-                            <span class="J_date_getcard"></span>
-                            <span class="ui-select-down">
-                                <i class="iconfont icon-down"></i>
-                            </span>                              </span>
+                        <input class="ui-input" id="cuisine" type="text" disabled>
                         <span class="ui-warming-note">输入有误，请重新填写</span>
                     </li>
                     <li><span class="tit">拿手好菜：</span>
@@ -85,5 +76,14 @@
     </div>
 
 </div>
+<div id="citySelectContainer"></div>
+<div id="cuisineSelectContainer"></div>
+<div id="birthDayContainer"></div>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/public/libs/multi-picker/MultiPicker.js"></script>
+<script src="/public/libs/date-picker/DateSelector.js"></script>
+<script src="/bower_components/vue/dist/vue.js"></script>
+<script src="/public/javascripts/register/provider-step2.js"></script>
 </body>
 </html>

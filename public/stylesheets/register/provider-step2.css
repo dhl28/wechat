@@ -1645,3 +1645,9 @@ html {
 .ui-botton-bar .ui-btn:first-child {
     margin-left: 0
 }
+.multi-picker-btn-box{
+    background: #ff8a01!important;
+}
+.date-selector-btn-box{
+    background: #ff8a01!important;
+}
