@@ -2,9 +2,15 @@
  * Created by douhongliang on 2017/7/3.
  */
 
+// var  data = ;
 var app = new Vue({
     el: '.container',
     data: {
+        registerInfo:{
+            birthDay:'',
+            city:'',
+            cuisine:''
+        }
     },
     methods:{
         location:function () {
@@ -12,6 +18,8 @@ var app = new Vue({
         }
     },
     mounted:function () {
+        var _this = this;
+        var currentYear = new Date().getFullYear();
         //出生日期
         new DateSelector({
             input:'birthday',
@@ -19,10 +27,10 @@ var app = new Vue({
             type:0,
             param:[1,1,1,0,0],
             beginTime:[],
-            endTime:[],
+            endTime:[currentYear,12, 31],
             recentTime:[],
             success:function (d) {
-                $('#birthday').val(d.join(('-')));
+                _this.$data.registerInfo.birthDay = d.join(('-'));
             }
         });
 
@@ -42,7 +50,8 @@ var app = new Vue({
                            path.push(p.value);
                        }
                     })
-                    $('#J_city_select').val(path.join('-'));
+                    _this.$data.registerInfo.city = path.join('-');
+                    // $('#J_city_select').val(path.join('-'));
                 }
             });
         });
@@ -53,7 +62,8 @@ var app = new Vue({
             jsonData:[{id:0,value:'川菜'},{id:1,value:'鲁菜'},{id:2,value:'粤菜'},
                 {id:3,value:'淮扬菜'},{id:4,value:'其他'}],
             success:function (d) {
-                $('#cuisine').val(d[0].value);
+                _this.$data.registerInfo.cuisine = d[0].value;
+                // $('#cuisine').val(d[0].value);
             }
         });
 
