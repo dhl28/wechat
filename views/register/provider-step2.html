@@ -33,7 +33,11 @@
                                id="ipt-card" type="text" maxlength="18">
                         <span class="ui-warming-note">输入有误，请重新填写</span></li>
                     <li><span class="tit">出生日期：</span>
-                        <input class="ui-input" id="birthday" type="text" v-bind:value="registerInfo.birthDay" disabled>
+                        <div class="ui-input ui-input-select">
+                            <input id="birthday" type="text" v-bind:value="registerInfo.birthDay" disabled>
+                            <span class="J_date_getcard"></span>
+                            <span class="ui-select-down"><i class="iconfont icon-down"></i></span>
+                        </div>
                     </li>
                     <li><span class="tit">性别：</span>
                         <span class="ui-input ui-input-select ui-no-border" id="ipt-fulltime">
@@ -52,18 +56,26 @@
                         </span>
                     </li>
                     <li><span class="tit">所在城市：</span>
-                        <input class="ui-input" id="J_city_select" type="text" v-bind:value="registerInfo.city"  disabled>
+                        <div class="ui-input ui-input-select">
+                            <input id="J_city_select" type="text" v-bind:value="registerInfo.city"  disabled>
+                            <span class="J_date_getcard"></span>
+                            <span class="ui-select-down"><i class="iconfont icon-down"></i></span>
+                        </div>
                         <span class="ui-warming-note" style="display: none;">输入有误，请重新填写</span></li>
                     <li><span class="tit">详细地址：</span>
                         <input class="ui-input J_data_check" id="ipt-cardnumber" type="text">
                         <span class="ui-warming-note">输入有误，请重新填写</span>
                     </li>
                     <li><span class="tit">擅长菜系：</span>
-                        <input class="ui-input" id="cuisine" v-bind:value="registerInfo.cuisine" type="text" disabled>
+                        <div class="ui-input ui-input-select">
+                            <input id="cuisine" v-bind:value="registerInfo.cuisine" type="text" disabled>
+                            <span class="J_date_getcard"></span>
+                            <span class="ui-select-down"><i class="iconfont icon-down"></i></span>
+                        </div>
                         <span class="ui-warming-note">输入有误，请重新填写</span>
                     </li>
                     <li><span class="tit">拿手好菜：</span>
-                        <textarea class="ui-input J_data_check" id="ipt-cardnumber" style="height: 50px"></textarea>
+                        <textarea class="ui-input J_data_check" style="height: 50px"></textarea>
                     </li>
 
                 </ul>
