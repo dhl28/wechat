@@ -14,6 +14,9 @@ module.exports = function (app) {
     app.use('/fzzy', function(req, res, next) {
         res.render('user/fzzy.html');
     });
+    app.use('/cpgl', function(req, res, next) {
+        res.render('user/cpgl.html');
+    });
 
     app.use('/', function(req, res, next) {
         res.render('index.html');
