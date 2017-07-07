@@ -65,7 +65,7 @@ ins, a {
     font-size: 14px;
     border-radius: 2px;
 }
-input[type="text"],textarea{
+input[type="text"],input[type="number"],textarea{
     -webkit-appearance: none;
 }
 
