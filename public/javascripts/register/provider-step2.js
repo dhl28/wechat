@@ -15,6 +15,9 @@ var app = new Vue({
     methods:{
         location:function () {
             console.log('to be finish');
+        },
+        submit:function () {
+            window.location.href = '/fzzy';
         }
     },
     mounted:function () {
