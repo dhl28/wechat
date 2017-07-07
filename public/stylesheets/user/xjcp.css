@@ -1,0 +1,216 @@
+@charset "utf-8";
+html {
+    color: #000;
+    background-color: #f0f0f2;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-size: 20px
+}
+
+html * {
+    outline: 0;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+ol, ul {
+    list-style: none
+}
+
+a:hover {
+    text-decoration: none
+}
+
+a:active {
+    text-decoration: none
+}
+
+ins, a {
+    text-decoration: none
+}
+.cp-img{
+    background:url("/public/imags/sxdp.jpg") no-repeat center;
+    background-size: 100%;
+    height: 130px;
+    position: relative;
+    text-align: center;
+}
+.cp-img .edit-cp-img{
+    position: absolute;
+    top: 50%;
+    margin-top: -20px ;
+    left: 50%;
+    margin-left: -40px;
+    display: block;
+    background-color: #EFEFEF;
+    border-color: #EFEFEF;
+    height: 40px;
+    width: 80px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.form{
+    padding: 10px;
+}
+.form-group{
+    padding: 10px 15px;
+}
+.form-group .control-label{
+    float: left;
+    width: 60px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+}
+.form-group .control-wrapper{
+    padding-left: 70px;
+}
+.form-group .form-control{
+    width: 100%;
+}
+.form-group .form-control.ipt{
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    padding: 0px 5px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+}
+.form-group textarea.form-control {
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    padding: 0px 5px;
+    font-size: 12px;
+    line-height: 15px;
+    height: 60px;
+    color: #666;
+}
+.footer{
+    margin-top: 20px;
+    text-align: center;
+}
+.btn{
+    width: 85%;
+    color: #fff;
+    background-color: #00c15c;
+    text-align: center;
+    border: 1px solid #00c15c;
+    border-radius: 5px;
+    font-size: 17px;
+    line-height: 40px;
+    height: 40px;
+}
+.btn.btn-cancel{
+    border-color: #d6b512;
+    background-color: #d6b512;
+}
+.footer .btn+.btn{
+    margin-top: 10px;
+}
+.ui-form-item{
+    font-size: 14px;
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+    position: relative;
+    display: flex;
+}
+.ui-radio{
+    line-height: 30px;
+    width: 50%;
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+}
+.ui-form-item label:not(.ui-switch):not(.ui-checkbox):not(.ui-radio) {
+    width: 100%;
+}
+.ui-form-item label:not(.ui-switch):not(.ui-checkbox):not(.ui-radio) {
+    width: 95px;
+    position: absolute;
+    text-align: left;
+    box-sizing: border-box;
+    color: #666;
+}
+.ui-checkbox label, .ui-radio label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-indent: 2em;
+}
+.ui-radio input {
+    padding-left: 0;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    position: relative;
+    overflow: visible;
+    border: 0;
+    background: 0 0;
+    -webkit-appearance: none;
+    outline: 0;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.ui-radio input:before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #dfe0e1;
+    border-radius: 13px;
+    background-clip: padding-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.ui-radio input:before {
+    width: 18px;
+    height: 18px;
+}
+
+
+.ui-radio input:checked:after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: #18b4ed;
+    border-radius: 7px;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+/*.ui-radio input:checked:after {*/
+    /*background: #ff8903;*/
+/*}*/
+.ui-radio input:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}

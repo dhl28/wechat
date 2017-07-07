@@ -17,7 +17,9 @@ module.exports = function (app) {
     app.use('/cpgl', function(req, res, next) {
         res.render('user/cpgl.html');
     });
-
+    app.use('/xjcp', function(req, res, next) {
+        res.render('user/xjcp.html');
+    });
     app.use('/', function(req, res, next) {
         res.render('index.html');
     });
