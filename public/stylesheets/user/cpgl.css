@@ -65,7 +65,7 @@ ins, a {
 .dr-input {
     font-size: 14px;
     height: 40px;
-    border: 1px solid #fff;
+    border: none;
     padding: 0;
     border-radius: 3px;
 }
