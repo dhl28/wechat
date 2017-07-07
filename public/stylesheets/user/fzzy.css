@@ -99,3 +99,6 @@ ul > li .fa {
     float: right;
     font-size: 14px;
 }
+.pointer{
+    cursor: pointer;
+}

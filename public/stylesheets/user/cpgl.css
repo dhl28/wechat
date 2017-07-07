@@ -46,7 +46,7 @@ ins, a {
 }
 
 .search{
-    padding: 20px 10px;
+    padding: 20px 10px 0 10px;
     display: flex;
 }
 
@@ -146,4 +146,7 @@ ins, a {
 }
 .cp-block .btn-wrapper .btn +.btn{
     margin-top: 10px;
+}
+.tool-bar{
+    padding: 10px;
 }

@@ -106,10 +106,11 @@ ins, a {
 }
 .footer{
     margin-top: 20px;
-    text-align: center;
+    padding: 0 20px;
 }
 .btn{
-    width: 85%;
+    display: block;
+    width: 100%;
     color: #fff;
     background-color: #00c15c;
     text-align: center;
