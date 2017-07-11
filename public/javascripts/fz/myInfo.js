@@ -11,7 +11,7 @@ var app = new Vue({
     },
     methods:{
         toCpgl:function () {
-            window.location.href='/cpgl'
+            window.location.href='/fz/cpgl'
         },
         toFzHomePage:function () {
             window.location.href='/fz/homepage'

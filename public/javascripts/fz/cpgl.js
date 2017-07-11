@@ -10,7 +10,7 @@ var app = new Vue({
     },
     methods:{
         toXjcp:function () {
-            window.location.href='/xjcp'
+            window.location.href='/fz/xjcp'
         }
     }
 })

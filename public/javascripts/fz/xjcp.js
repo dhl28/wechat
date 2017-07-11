@@ -10,10 +10,10 @@ var app = new Vue({
     },
     methods:{
         save:function () {
-            window.location.href='/cpgl'
+            window.location.href='/fz/cpgl'
         },
         cancel:function () {
-            window.location.href='/cpgl'
+            window.location.href='/fz/cpgl'
         }
     }
 })

@@ -45,57 +45,195 @@ ins, a {
     text-decoration: none
 }
 
-.head-info {
-    height: 100px;
-    padding: 10px 10px 10px 20px;
+.content-wrapper{
+    padding: 0 8px;
 }
 
-ul li {
-    padding: 10px 20px;
-    height: 30px;
-    border-bottom: 1px solid #f2f0f0;
-    line-height: 30px;
+.profile{
+    background-color: #FF9800;
+    padding: 0 10px;
     position: relative;
 }
+.profile .header{
+    padding-top: 10px;
+    position: relative;
+}
+.profile .header .msg{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    font-size: 20px;
+    color: #ffffff;
+}
+.header .user-picture{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: url("/public/imags/head.jpg") no-repeat center;
+    background-size: cover;
+}
+.profile .row{
+    height: 40px;
+    position: relative;
+    display: flex;
+    padding: 5px 0;
+}
+.profile .first-row {
+    border-bottom: 1px solid #FFEB3B;
 
-ul {
-    background-color: #ffffff;
-    padding: 0 20px;
+}
+.profile .second-row{
+
+}
+
+.row .item{
+    flex: 1;
+}
+.row .item .title{
+    font-size: 12px;
+    color: #EFEFEF;
+}
+.row .item .content{
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.profile .check-in{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: #FFEB3B;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: #FF5722;
+}
+.profile .check-in .fa{
+    margin-right: 3px;
+}
+
+.section-title-wrapper{
+    margin-bottom: 10px;
+}
+.section-title {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-bottom: 1px solid #EFEFEF;
+    overflow: hidden;
+    border-bottom:     1px solid rgba(158, 158, 158, 0.49);
+}
+
+.section-title .label {
+    float: left;
+}
+
+.section-title .view-more {
+    float: right;
+}
+
+.cp-block-wrapper {
+    margin: 10px 0;
+}
+
+.cp-block {
+    position: relative;
+    display: flex;
+    height: 80px;
+    padding: 20px 10px;
+    background: #ffffff;
     border-top: solid 1px rgba(94, 94, 94, 0.28);
     border-bottom: solid 1px rgba(94, 94, 94, 0.28);
 }
 
-ul li:last-child {
-    border-bottom: none;
+.cp-block + .cp-block {
+    margin-top: 10px;
 }
 
-ul > li .fa {
-    float: right;
-    position: relative;
-    top:5px;
-    color: rgba(94, 94, 94, 0.56);
+.cp-block > div {
+    box-sizing: border-box;
+
 }
 
-.head-info .icon{
-    float: left;
-    width: 100px;
-    background: grey;
-    height: 100%;
-    border-radius: 100px;
-    background: url("/public/imags/head.jpg") no-repeat center;
+.cp-block .icon {
+    flex-grow: 0;
+    width: 80px;
+    height: 80px;
     background-size: cover;
 }
-.head-info .disc{
-    padding-left: 120px;
-    height: 100%;
-    font-size: 18px;
+
+.cp-block .icon.icon-ftq {
+    background: url("/public/imags/fotiaoqiang.jpg") no-repeat center;
 }
-.head-info .disc .name{
-    padding-top: 28px;
-    margin-bottom: 15px;
-    padding-right: 20px;
+
+.cp-block .icon.icon-arxhf {
+    background: url("/public/imags/arxhf.jpeg") no-repeat center;
 }
-.view-fz-info{
+
+.cp-block .disc {
+    flex-grow: 1;
+    height: 80px;
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.cp-block .disc .title {
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.cp-block .disc > div + div {
+    margin-top: 10px;
+    color: rgba(75, 80, 95, 0.55);
+}
+.cp-block  .view-detail{
+    color: #FF9800;
     float: right;
-    font-size: 14px;
+}
+.btn {
+    flex-grow: 0;
+    padding: 5px 18px;
+    color: #fff;
+    background-color: #00c15c;
+    display: block;
+    text-align: center;
+    border: 1px solid #00c15c;
+    border-radius: 3px;
+}
+
+.cp-block .btn-wrapper {
+    padding-top: 5px;
+}
+
+.cp-block .btn-wrapper .btn + .btn {
+    margin-top: 10px;
+}
+
+.tool-bar {
+    padding: 10px;
+}
+.feedback{
+    height: 100px;
+}
+.feedback >div{
+    float: left;
+}
+.feedback .cp-icon{
+    height: 100px;
+    border-radius: 100px;
+    width: 100px;
+    background: url("/public/imags/fotiaoqiang.jpg") no-repeat center;
+    background-size: cover;
+}
+.feedback .comment{
+    height: 100px;
+    padding: 5px 0px 5px 15px;
+}
+.feedback .comment .grade{
+    color: #FF9800;
+    height: 45px;
+    line-height: 45px;
+}
+.feedback .comment .disc{
+    height: 45px;
+    line-height: 45px;
 }
