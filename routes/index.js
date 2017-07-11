@@ -11,14 +11,21 @@ module.exports = function (app) {
     app.use('/users',require('./users'))
     app.use('/register',require('./register'))
 
-    app.use('/fzzy', function(req, res, next) {
-        res.render('user/fzzy.html');
+    app.use('/fz/homepage', function(req, res, next) {
+        res.render('fz/homePage.html');
     });
-    app.use('/cpgl', function(req, res, next) {
-        res.render('user/cpgl.html');
+    app.use('/fz/order', function(req, res, next) {
+        res.render('fz/order.html');
     });
-    app.use('/xjcp', function(req, res, next) {
-        res.render('user/xjcp.html');
+    app.use('/fz/myinfo', function(req, res, next) {
+        res.render('fz/myInfo.html');
+    });
+
+    app.use('/fz/cpgl', function(req, res, next) {
+        res.render('fz/cpgl.html');
+    });
+    app.use('/fz/xjcp', function(req, res, next) {
+        res.render('fz/xjcp.html');
     });
     app.use('/', function(req, res, next) {
         res.render('index.html');

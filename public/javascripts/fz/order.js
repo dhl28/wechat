@@ -7,10 +7,21 @@
 var app = new Vue({
     el: '.container',
     data: {
+        isActive:false
     },
     methods:{
         toCpgl:function () {
             window.location.href='/cpgl'
+        },
+        toMyInfo:function () {
+            window.location.href='/fz/myinfo'
+        },
+        toHomePage:function () {
+            window.location.href='/fz/homepage'
         }
+
+    },
+    mounted:function () {
+
     }
 })

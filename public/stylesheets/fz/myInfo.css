@@ -1,0 +1,101 @@
+@charset "utf-8";
+html {
+    color: #000;
+    background-color: #f0f0f2;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-size: 20px
+}
+
+html * {
+    outline: 0;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 16px
+}
+
+ol, ul {
+    list-style: none
+}
+
+a:hover {
+    text-decoration: none
+}
+
+a:active {
+    text-decoration: none
+}
+
+ins, a {
+    text-decoration: none
+}
+
+.head-info {
+    height: 100px;
+    padding: 10px 10px 10px 20px;
+}
+
+ul li {
+    padding: 10px 20px;
+    height: 30px;
+    border-bottom: 1px solid #f2f0f0;
+    line-height: 30px;
+    position: relative;
+}
+
+ul {
+    background-color: #ffffff;
+    padding: 0 20px;
+    border-top: solid 1px rgba(94, 94, 94, 0.28);
+    border-bottom: solid 1px rgba(94, 94, 94, 0.28);
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul > li .fa {
+    float: right;
+    position: relative;
+    top:5px;
+    color: rgba(94, 94, 94, 0.56);
+}
+
+.head-info .icon{
+    float: left;
+    width: 100px;
+    background: grey;
+    height: 100%;
+    border-radius: 100px;
+    background: url("/public/imags/head.jpg") no-repeat center;
+    background-size: cover;
+}
+.head-info .disc{
+    padding-left: 120px;
+    height: 100%;
+    font-size: 18px;
+}
+.head-info .disc .name{
+    padding-top: 28px;
+    margin-bottom: 15px;
+    padding-right: 20px;
+}
+.view-fz-info{
+    float: right;
+    font-size: 14px;
+}

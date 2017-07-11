@@ -9,23 +9,26 @@ var constant = {
     'menu': {
         "button": [
             {
-                "type": "click",
-                "name": "今日歌曲",
-                "key": "V1001_TODAY_MUSIC"
-            },
-            {
-                "name": "菜单",
+                "name": "我要吃饭",
                 "sub_button": [
                     {
                         "type": "view",
-                        "name": "搜索",
+                        "name": "我",
                         "url": "http://www.soso.com/"
                     },
                     {
-                        "type": "click",
-                        "name": "赞一下我们",
-                        "key": "V1001_GOOD"
+                        "type": "view",
+                        "name": "我的订单",
+                        "url": "http://www.soso.com/"
+                    },{
+                        "type": "view",
+                        "name": "附近美食",
+                        "url": "http://www.soso.com/"
                     }]
+            },{
+                "type": "view",
+                "name": "我要做饭",
+                "url": "http://123.206.33.24/register/provider-step1"
             }]
     }
 };

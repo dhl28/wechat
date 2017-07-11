@@ -17,7 +17,7 @@ var app = new Vue({
             console.log('to be finish');
         },
         submit:function () {
-            window.location.href = '/fzzy';
+            window.location.href = '/fz/myinfo';
         }
     },
     mounted:function () {
