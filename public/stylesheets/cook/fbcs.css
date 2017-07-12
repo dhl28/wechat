@@ -1,0 +1,75 @@
+@charset "utf-8";
+html {
+    color: #000;
+    background-color: #f0f0f2;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-size: 10px
+}
+.content-wrapper{
+    padding: 10px 10px;
+}
+.calendar-wrap{
+    margin-bottom: 15px;
+}
+.label{
+    color: #FF9800;
+    margin-bottom: 5px;
+    padding: 0 5px;
+}
+.ipt{
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    padding: 0px 5px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+}
+.ipt-container{
+    display: flex;
+}
+
+.ipt-csmc {
+    /*width: 100%;*/
+    flex: 1;
+    text-align: left;
+}
+.date-container{
+    display: flex;
+    margin-bottom: 15px;
+}
+.date-container .ipt{
+    flex: 1;
+}
+.date-container .connector{
+    flex: 0;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 10px;
+}
+.check-box-wrapper{
+    margin: 10px 0 20px 0;
+}
+.check-box-label{
+    margin-left: 5px;
+    color: #2196F3;
+}
+.footer{
+    text-align: center;
+    margin: 10px;
+}
+.btn{
+    width: 160px;
+    color: #fff;
+    background-color: #00c15c;
+    text-align: center;
+    border: 1px solid #00c15c;
+    border-radius: 5px;
+    font-size: 17px;
+    line-height: 40px;
+    height: 40px;
+}

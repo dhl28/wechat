@@ -11,17 +11,56 @@
     <meta name="description" content="">
     <title>下厨</title>
     <link rel="stylesheet" href="/public/libs/font-awesome/css/font-awesome.min.css" media="all">
+    <link rel="stylesheet" href="/public/libs/multi-picker/MultiPicker.css" media="all">
+    <link rel="stylesheet" href="/public/libs/date-picker/DateSelector.css" media="all">
+    <link rel="stylesheet" href="/public/libs/calendar/css/calendar.css" media="all">
     <link rel="stylesheet" href="/public/stylesheets/style.css">
-    <link rel="stylesheet" href="/public/stylesheets/fz/cpgl.css" media="all">
+    <link rel="stylesheet" href="/public/stylesheets/cook/fbcs.css" media="all">
 </head>
 <body>
 <div class="container">
+    <div class="content-wrapper">
+        <h3 class="label">第一步：选择日期</h3>
+        <div class="calendar-wrap"></div>
+        <h3 class="label">第二步：选择时间段</h3>
+        <div class="date-container">
+            <input id="startTime" class="ipt" type="text" v-bind:value="startTime" readonly>
+            <div class="connector">-</div>
+            <input id="endTime" class="ipt" type="text" v-bind:value="endTime"  readonly>
+        </div>
+        <h3 class="label">第三步：做什么</h3>
+        <div class="ipt-container">
+            <input id="csmc" class="ipt ipt-csmc" type="text" v-bind:value="csmc"  readonly>
+        </div>
+        <div class="check-box-wrapper">
+            <input type="checkbox"> <span class="check-box-label">不在列表中，我要做个新的</span>
+        </div>
+
+
+        <div class="footer">
+            <button class="btn">继续</button>
+        </div>
+
+
+    </div>
 
 
 </div>
 
+<div id="startTimeContainer"></div>
+<div id="endTimeContainer"></div>
+<div id="csmcSelectContainer"></div>
+
+
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/vue/dist/vue.js"></script>
+<script src="/public/libs/calendar/js/zepto.min.js"></script>
+<script src="/public/libs/calendar/js/widget.js"></script>
+<script src="/public/libs/calendar/js/calendar.js"></script>
+<script src="/public/libs/calendar/js/calendar-extend-slide.js"></script>
+
+<script src="/public/libs/multi-picker/MultiPicker.js"></script>
+<script src="/public/libs/date-picker/DateSelector.js"></script>
 <script src="/public/javascripts/cook/fbcs.js"></script>
 </body>
 </html>

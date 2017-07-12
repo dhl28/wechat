@@ -18,6 +18,9 @@ var app = new Vue({
         },
         toFzOrder:function () {
             window.location.href='/fz/order'
+        },
+        fbcs:function () {
+            window.location.href='/cook/fbcs'
         }
 
     },
