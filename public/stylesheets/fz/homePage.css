@@ -26,7 +26,8 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 .container {
     max-width: 500px;
     margin: 0 auto;
-    font-size: 16px
+    font-size: 16px;
+    padding-bottom: 70px;
 }
 
 ol, ul {
@@ -110,6 +111,25 @@ ins, a {
 }
 .profile .check-in .fa{
     margin-right: 3px;
+}
+.links-wrapper{
+    padding: 0 3px;
+}
+.links{
+    display: flex;
+    height: 80px;
+}
+.links .link-item{
+    flex: 1;
+}
+.links .link-item .link-icon{
+    color: red;
+    text-align: center;
+    font-size: 24px;
+    margin: 10px;
+}
+.links .link-item .link-label{
+    text-align: center;
 }
 
 .section-title-wrapper{
