@@ -29,7 +29,9 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
     font-size: 16px;
     padding-bottom: 70px;
 }
-
+.container .content-wrapper{
+    padding: 5px 8px;
+}
 ol, ul {
     list-style: none
 }
@@ -45,58 +47,66 @@ a:active {
 ins, a {
     text-decoration: none
 }
-
-.head-info {
-    height: 100px;
-    padding: 10px 10px 10px 20px;
+.block-title{
+    color: red;
+    margin: 10px 5px 5px 5px;
 }
 
-ul li {
-    padding: 10px 20px;
-    height: 30px;
-    border-bottom: 1px solid #f2f0f0;
-    line-height: 30px;
+.cp-block-wrapper{
+
+}
+
+.cp-block{
     position: relative;
-}
-
-ul {
-    background-color: #ffffff;
-    padding: 0 20px;
+    display: flex;
+    height: 80px;
+    padding: 20px 10px;
+    background: #ffffff;
     border-top: solid 1px rgba(94, 94, 94, 0.28);
     border-bottom: solid 1px rgba(94, 94, 94, 0.28);
 }
-
-ul li:last-child {
-    border-bottom: none;
+.cp-block + .cp-block{
+    margin-top: 10px;
 }
+.cp-block >div{
+    box-sizing: border-box;
 
-ul > li .fa {
-    float: right;
-    position: relative;
-    top:5px;
-    color: rgba(94, 94, 94, 0.56);
 }
-
-.head-info .icon{
-    float: left;
-    width: 100px;
-    background: grey;
-    height: 100%;
-    border-radius: 100px;
-    background: url("/public/imags/head.jpg") no-repeat center;
+.cp-block .icon{
+    flex-grow: 0;
+    width: 80px;
+    height: 80px;
     background-size: cover;
 }
-.head-info .disc{
-    padding-left: 120px;
-    height: 100%;
-    font-size: 18px;
+.cp-block .icon.icon-ftq{
+    background: url("/public/imags/fotiaoqiang.jpg") no-repeat center;
 }
-.head-info .disc .name{
-    padding-top: 28px;
-    margin-bottom: 15px;
-    padding-right: 20px;
+.cp-block .icon.icon-arxhf{
+    background: url("/public/imags/arxhf.jpeg") no-repeat center;
 }
-.view-fz-info{
+.cp-block .disc{
+    flex-grow: 1;
+    height: 80px;
+    padding: 0 10px;
+    font-size: 12px;
+}
+.cp-block .disc .title{
+    font-weight: 500;
+}
+.cp-block .disc >div + div{
+    margin-top: 10px;
+    color: rgba(75, 80, 95, 0.55);
+}
+
+.cp-block .btn-wrapper{
+    padding-top: 5px;
+}
+.cp-block .btn-wrapper .btn +.btn{
+    margin-top: 10px;
+}
+.tool-bar{
+    padding: 10px;
+}
+.cp-block .order-detail{
     float: right;
-    font-size: 14px;
 }
