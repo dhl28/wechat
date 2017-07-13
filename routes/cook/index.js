@@ -16,4 +16,8 @@ router.use('/dzcs', function(req, res, next) {
     res.render('cook/dzcs.html');
 });
 
+router.use('/csyl', function(req, res, next) {
+    res.render('cook/csyl.html');
+});
+
 module.exports = router;
