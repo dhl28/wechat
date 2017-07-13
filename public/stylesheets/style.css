@@ -28,6 +28,9 @@ a {
   color: #00B7FF;
   cursor: pointer;
 }
+input[type="text"], input[type="number"], textarea {
+  -webkit-appearance: none;
+}
 
 .pointer{
   cursor: pointer;
