@@ -7,6 +7,9 @@ html {
     text-size-adjust: 100%;
     font-size: 10px
 }
+.container{
+    margin-bottom: 30px;
+}
 .content-wrapper{
     padding: 10px 10px;
 }
@@ -72,4 +75,7 @@ html {
     font-size: 17px;
     line-height: 40px;
     height: 40px;
+}
+.date-selector-btn-box .date-selector-btn,.multi-picker-btn-box .multi-picker-btn{
+    font-size: 20px;
 }
