@@ -13,7 +13,7 @@ var app = new Vue({
     },
     methods:{
          next:function () {
-            window.location.href='/fz/xjcp'
+            window.location.href='/cook/dzcs'
         }
     },
     mounted:function () {

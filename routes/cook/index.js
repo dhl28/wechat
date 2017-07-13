@@ -7,10 +7,13 @@
 var express = require('express');
 var router = express.Router();
 
-//配置微信菜单
 
 router.use('/fbcs', function(req, res, next) {
     res.render('cook/fbcs.html');
+});
+
+router.use('/dzcs', function(req, res, next) {
+    res.render('cook/dzcs.html');
 });
 
 module.exports = router;

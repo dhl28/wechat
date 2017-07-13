@@ -1,0 +1,87 @@
+
+.content-wrapper {
+    padding: 10px 10px;
+}
+
+.cs-img {
+    height: 250px;
+    background: url("/public/imags/jchz.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.csmc {
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+.price-wrapper {
+    color: #FF9800;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.ipt {
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    padding: 0px 5px;
+    font-size: 12px;
+    height: 30px;
+    color: #666;
+    font-size: 14px;
+    width: 50px;
+}
+
+.cs-detail {
+    display: flex;
+}
+
+.cs-detail span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.delivery {
+    flex: 6;
+}
+
+.delivery .ipt {
+    width: 80px;
+}
+
+.count-wrapper {
+    flex: 5;
+}
+
+.introduction {
+    color: #4CAF50;
+    padding: 5px 0;
+    text-indent: 32px;
+}
+.footer{
+    display: flex;
+ padding: 5px 20px;
+}
+.btn-wrapper{
+    flex: 1;
+    padding: 0 20px;
+}
+
+.btn{
+    width: 100%;
+    color: #fff;
+    background-color: #00c15c;
+    text-align: center;
+    border: 1px solid #00c15c;
+    border-radius: 5px;
+    font-size: 17px;
+    line-height: 40px;
+    height: 40px;
+}
+.btn.modify-date{
+    background-color:#FF9800;
+    border: 1px solid #FF9800;
+}
