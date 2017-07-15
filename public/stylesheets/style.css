@@ -28,6 +28,19 @@ a {
   color: #00B7FF;
   cursor: pointer;
 }
+
+a:hover {
+  text-decoration: none
+}
+
+a:active {
+  text-decoration: none
+}
+
+ins, a {
+  text-decoration: none
+}
+
 input[type="text"], input[type="number"], textarea {
   -webkit-appearance: none;
 }

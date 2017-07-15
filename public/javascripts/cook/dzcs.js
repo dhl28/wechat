@@ -13,6 +13,9 @@ var app = new Vue({
     methods:{
          next:function () {
             window.location.href='/cook/csyl'
+        },
+        prev:function () {
+            window.location.href='/cook/fbcs'
         }
     },
     mounted:function () {

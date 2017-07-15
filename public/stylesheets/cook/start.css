@@ -1,0 +1,76 @@
+.container{
+    margin-top: 20px;
+}
+.order{
+    padding: 0 10px;
+}
+.order .name{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.order .desc{
+    margin-bottom: 10px;
+    color: #FF9800;
+}
+.order .desc .date{
+    float: right;
+}
+hr{
+    color: #EFEFEF;
+}
+.detail{
+    padding: 25px 10px;
+}
+.detail .title{
+    font-size: 18px;
+}
+.detail .title+.title{
+    margin-top: 10px;
+}
+span.number,span.date{
+    color: #FF9800;
+    margin: 0 8px;
+}
+.record{
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 15px 10px;
+}
+.record .item{
+    display: flex;
+}
+.record .item .sk-avatar{
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    background: url("/public/imags/yanxiaoliu.jpg") no-repeat center;
+    background-size: cover;
+}
+.record .item .content {
+    height: 40px;
+    line-height: 40px;
+    margin-left: 15px;
+}
+.record .item+ .item{
+    margin-top: 10px;
+}
+.footer{
+    text-align: center;
+}
+.btn{
+    width: 150px;
+    color: #fff;
+    background-color: #00c15c;
+    text-align: center;
+    border: 1px solid #00c15c;
+    border-radius: 5px;
+    font-size: 17px;
+    line-height: 40px;
+    height: 40px;
+
+}
+
+.cancel{
+    margin-top: 10px;
+}

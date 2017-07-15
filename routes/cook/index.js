@@ -20,4 +20,9 @@ router.use('/csyl', function(req, res, next) {
     res.render('cook/csyl.html');
 });
 
+router.use('/start', function(req, res, next) {
+    res.render('cook/start.html');
+});
+
+
 module.exports = router;
