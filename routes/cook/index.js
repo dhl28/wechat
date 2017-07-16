@@ -24,5 +24,9 @@ router.use('/start', function(req, res, next) {
     res.render('cook/start.html');
 });
 
+router.use('/process', function(req, res, next) {
+    res.render('cook/process.html');
+});
+
 
 module.exports = router;

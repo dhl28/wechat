@@ -11,11 +11,11 @@ var app = new Vue({
         count:null
     },
     methods:{
-        toHome:function () {
-            window.location.href='/fz/homepage'
+        prev:function () {
+            window.location.href='/cook/dzcs'
         },
         next:function () {
-            window.location.href='/cook/process'
+            window.location.href='/fz/order'
         }
     },
     mounted:function () {

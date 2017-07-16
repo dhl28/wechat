@@ -1,0 +1,115 @@
+.container{
+  margin-top: 20px;
+}
+.order{
+  padding: 0 10px;
+}
+.order .name{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.order .desc{
+  margin-bottom: 10px;
+}
+.order .desc .row2{
+  margin-top: 8px;
+  overflow: hidden;
+}
+.order .desc .row2 .label {
+  font-weight: 500;
+}
+.order .desc .row2 .content{
+  color: #9E9E9E;
+}
+.order .desc .row2 .delivery{
+  float: left;
+}
+.order .desc .row2 .count{
+  float: right;
+}
+.order .desc .date{
+  float: right;
+  color: #9E9E9E;
+}
+.order .price{
+  color: #FF9800;
+}
+
+hr{
+  color: #EFEFEF;
+}
+.detail{
+  padding: 15px 10px;
+}
+.detail .title{
+  font-size: 18px;
+}
+.detail .title+.title{
+  margin-top: 10px;
+}
+.detail span.date{
+  color: #9E9E9E;
+  float: right;
+  margin: 0 8px;
+  font-size: 14px;
+}
+.record{
+  padding: 15px 10px;
+}
+.record ul > li{
+  position: relative;
+  padding: 9px 0 0 15px;
+  line-height: 22px;
+  border-left: 1px solid #d9d9d9;
+  color: #333;
+}
+li.first {
+  padding-top: 0 !important;
+}
+li .node-icon {
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  width: 11px;
+  height: 11px;
+  background: url(/public/imags/order-icons.png) -21px -72px #f0f0f2 no-repeat;
+}
+li.first .node-icon {
+  background-position: 0 -65px;
+  height: 20px;
+  top: 0;
+}
+.record li .code{
+  font-size: 14px;
+  color: #9E9E9E;
+  margin-top: 5px;
+}
+.record li .txt{
+  font-weight: 500;
+}
+
+.footer{
+  display: flex;
+  padding: 5px 20px;
+}
+.btn-wrapper{
+  flex: 1;
+  padding: 0 20px;
+}
+
+.btn{
+  width: 100%;
+  color: #fff;
+  background-color: #00c15c;
+  text-align: center;
+  border: 1px solid #00c15c;
+  border-radius: 5px;
+  font-size: 17px;
+  line-height: 40px;
+  height: 40px;
+}
+.btn.modify-date{
+  background-color:#FF9800;
+  border: 1px solid #FF9800;
+}
