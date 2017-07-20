@@ -18,6 +18,9 @@ var app = new Vue({
         },
         toHomePage:function () {
             window.location.href='/fz/homepage'
+        },
+        toProcess:function () {
+            window.location.href='/cook/process'
         }
 
     },

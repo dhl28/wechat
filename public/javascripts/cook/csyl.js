@@ -15,7 +15,7 @@ var app = new Vue({
             window.location.href='/cook/dzcs'
         },
         next:function () {
-            window.location.href='/cook/start'
+            window.location.href='/cook/process'
         }
     },
     mounted:function () {

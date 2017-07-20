@@ -62,16 +62,18 @@ html {
     color: #2196F3;
 }
 .footer{
-    text-align: center;
-    margin: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
+
+
 .btn{
-    width: 160px;
+    width: 100%;
     color: #fff;
-    background-color: #00c15c;
+    background-color:#fa8919;
     text-align: center;
-    border: 1px solid #00c15c;
-    border-radius: 5px;
+    border: 1px solid #fa8919;
     font-size: 17px;
     line-height: 40px;
     height: 40px;

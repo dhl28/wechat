@@ -26,22 +26,16 @@
         <div class="date-container">
             <input id="startTime" class="ipt" type="text" v-bind:value="startTime" readonly>
             <div class="connector">-</div>
-            <input id="endTime" class="ipt" type="text" v-bind:value="endTime"  readonly>
+            <input id="endTime" class="ipt" type="text" v-bind:value="endTime" readonly>
         </div>
         <h3 class="label">第三步：做什么</h3>
         <div class="ipt-container">
-            <input id="csmc" class="ipt ipt-csmc" type="text" v-bind:value="csmc"  readonly>
-        </div>
-        <div class="check-box-wrapper">
-            <input type="checkbox"> <span class="check-box-label">不在列表中，我要做个新的</span>
+            <input id="csmc" class="ipt ipt-csmc" type="text" v-bind:value="csmc" readonly>
         </div>
 
-
-        <div class="footer">
-            <button class="btn" @click="next()">继续</button>
-        </div>
-
-
+    </div>
+    <div class="footer">
+        <button class="btn" @click="next()">继续</button>
     </div>
 
 

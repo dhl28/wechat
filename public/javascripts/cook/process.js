@@ -16,6 +16,9 @@ var app = new Vue({
         },
         next:function () {
             window.location.href='/fz/order'
+        },
+        startCook:function () {
+            $(".footer-0,.footer-1").toggleClass("hide");
         }
     },
     mounted:function () {

@@ -10,10 +10,13 @@
     background: url("/public/imags/jchz.jpg") no-repeat center;
     background-size: cover;
 }
-
+.time-range{
+    float: right;
+}
 .csmc {
     padding: 10px 0;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 hr {
@@ -21,9 +24,8 @@ hr {
 }
 
 .price-wrapper {
-    color: #FF9800;
+    color: #fa8919;
     font-size: 18px;
-    font-weight: 500;
 }
 
 .ipt {
@@ -43,7 +45,6 @@ hr {
 
 .cs-detail span {
     font-size: 18px;
-    font-weight: 500;
 }
 
 .delivery {
@@ -54,7 +55,7 @@ hr {
     width: 80px;
 }
 span.span-content{
-    color: #FF9800;
+    color: #fa8919;
 }
 .count-wrapper {
     flex: 5;
@@ -66,26 +67,19 @@ span.span-content{
     text-indent: 32px;
 }
 .footer{
-    display: flex;
- padding: 5px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
-.btn-wrapper{
-    flex: 1;
-    padding: 0 20px;
-}
+
 
 .btn{
     width: 100%;
     color: #fff;
-    background-color: #00c15c;
+    background-color:#fa8919;
     text-align: center;
-    border: 1px solid #00c15c;
-    border-radius: 5px;
+    border: 1px solid #fa8919;
     font-size: 17px;
     line-height: 40px;
     height: 40px;
-}
-.btn.modify-date{
-    background-color:#FF9800;
-    border: 1px solid #FF9800;
 }
