@@ -11,9 +11,14 @@
     <meta name="description" content="">
     <title>饭主首页</title>
     <link rel="stylesheet" href="/public/libs/font-awesome/css/font-awesome.min.css" media="all">
+    <link rel="stylesheet" href="/public/libs/jquery-pagewalkthrough/css/jquery.pagewalkthrough.min.css" media="all">
     <link rel="stylesheet" href="/public/stylesheets/style.css">
     <link rel="stylesheet" href="/public/stylesheets/fz/homePage.css" media="all">
+    <link href='http://cdn.webfont.youziku.com/webfonts/nomal/105486/45803/59730a01f629d81af807875b.css'
+          rel='stylesheet' type='text/css'/>
+
 </head>
+
 <body>
 <div class="container">
     <div class="profile">
@@ -23,35 +28,38 @@
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
             </div>
         </div>
-        <div class="row first-row">
-            <div class="item">
-                <div class="title">已制作大餐&nbsp;(份)</div>
-                <div class="content">556</div>
+        <div class="basic-info">
+            <div class="row first-row">
+                <div class="item">
+                    <div class="title">已制作大餐&nbsp;(份)</div>
+                    <div class="content">556</div>
+                </div>
+                <div class="item">
+                    <div class="title">已成为饭主</div>
+                    <div class="content">365天</div>
+                </div>
+                <div class="item">
+                    <div class="title">累计得到赞&nbsp;(个)</div>
+                    <div class="content">872</div>
+                </div>
             </div>
-            <div class="item">
-                <div class="title">已成为饭主</div>
-                <div class="content">365天</div>
-            </div>
-            <div class="item">
-                <div class="title">累计得到赞&nbsp;(个)</div>
-                <div class="content">872</div>
-            </div>
-        </div>
-        <div class="row second-row">
-            <div class="item">
-                <div class="title">已收到零钱&nbsp;(元)</div>
-                <div class="content">4000,0.00</div>
-            </div>
-            <div class="item">
-                <div class="title">围观</div>
-                <div class="content">663.00</div>
-            </div>
-            <div class="item"></div>
+            <div class="row second-row">
+                <div class="item">
+                    <div class="title">已收到零钱&nbsp;(元)</div>
+                    <div class="content">4000,0.00</div>
+                </div>
+                <div class="item">
+                    <div class="title">围观</div>
+                    <div class="content">663.00</div>
+                </div>
+                <div class="item"></div>
 
+            </div>
+            <div class="check-in">
+                <i class="fa fa-gift" aria-hidden="true"></i>签到有礼
+            </div>
         </div>
-        <div class="check-in">
-            <i class="fa fa-gift" aria-hidden="true"></i>签到有礼
-        </div>
+
     </div>
     <div class="links-wrapper">
         <div class="links">
@@ -89,36 +97,38 @@
         </div>
     </div>
     <div class="content-wrapper">
-        <div class="section-title-wrapper">
-            <div class="section-title">
-                <span class="label">美食榜</span>
-                <span class="view-more">更多>></span>
+        <div class="food-list">
+            <div class="section-title-wrapper">
+                <div class="section-title">
+                    <span class="label">美食榜</span>
+                    <span class="view-more">更多>></span>
+                </div>
             </div>
-        </div>
 
-
-        <div class="cp-block-wrapper">
-            <div class="cp-block">
-                <div class="icon icon-ftq"></div>
-                <div class="disc">
-                    <div class="title">佛跳墙 <span class="view-detail">看看谁在吃</span></div>
-                    <div class="date">累计点餐量 126次</div>
-                    <div class="count">
-                        最后一次供应于 2017年6月25日
+            <div class="cp-block-wrapper">
+                <div class="cp-block">
+                    <div class="icon icon-ftq"></div>
+                    <div class="disc">
+                        <div class="title">佛跳墙 <span class="view-detail">看看谁在吃</span></div>
+                        <div class="date">累计点餐量 126次</div>
+                        <div class="count">
+                            最后一次供应于 2017年6月25日
+                        </div>
+                    </div>
+                </div>
+                <div class="cp-block">
+                    <div class="icon icon-arxhf"></div>
+                    <div class="disc">
+                        <div class="title ">黯然销魂饭 <span class="view-detail">看看谁在吃</span></div>
+                        <div class="date">累计点餐量 300次</div>
+                        <div class="count">
+                            最后一次供应于 2017年6月29日
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="cp-block">
-                <div class="icon icon-arxhf"></div>
-                <div class="disc">
-                    <div class="title ">黯然销魂饭  <span class="view-detail">看看谁在吃</span></div>
-                    <div class="date">累计点餐量 300次</div>
-                    <div class="count">
-                        最后一次供应于 2017年6月29日
-                    </div>
-                </div>
-            </div>
         </div>
+
         <div class="section-title-wrapper">
             <div class="section-title">
                 <span class="label">吃货反馈</span>
@@ -143,16 +153,54 @@
     </div>
 
 
-
     <!-- 底部导航 -->
     <div class="fix-footer">
-        <a class="menu active"><i class="fa fa-home" aria-hidden="true"></i>首页</a>
-        <a class="menu" @click="toFzOrder()"><i class="fa fa-th-list" aria-hidden="true" ></i>订单</a>
-        <a class="menu" @click="toMyInfo()"><i class="fa fa-user" aria-hidden="true"></i>我</a>
+        <div class="footer-wrapper">
+            <a class="menu active"><i class="fa fa-home" aria-hidden="true"></i>首页</a>
+            <a class="menu" @click="toFzOrder()"><i class="fa fa-th-list" aria-hidden="true"></i>订单</a>
+            <a class="menu" @click="toMyInfo()"><i class="fa fa-user" aria-hidden="true"></i>我</a>
+        </div>
+
     </div>
+</div>
+<div id="walkthrough-content">
+    <div id="walkthrough-1">
+        <div class="art-font">
+            <h2>欢迎大厨入住百家帮</h2>
+            <p>下面带您熟悉个人主页</p>
+            <p>点击"next"继续</p>
+        </div>
+
+    </div>
+
+    <div id="walkthrough-2">
+        <div class="art-font">
+            这是饭主基本信息，点击右下角"签到有礼"可获取积分哦
+        </div>
+    </div>
+
+    <div id="walkthrough-3">
+        <div class="art-font">
+            此处是快捷菜单，包含了饭主的常用操作
+        </div>
+    </div>
+
+    <div id="walkthrough-4">
+        <div class="art-font">
+            美食榜，随时查看您最受欢迎的菜品
+        </div>
+    </div>
+
+    <div id="walkthrough-5">
+        <div class="art-font">
+            这是底部菜单。介绍完毕，祝您在"百家帮"大展厨艺！
+        </div>
+    </div>
+
 </div>
 
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/public/libs/jquery-pagewalkthrough/jquery.pagewalkthrough.js"></script>
 <script src="/bower_components/vue/dist/vue.js"></script>
 <script src="/public/javascripts/fz/homePage.js"></script>
 </body>

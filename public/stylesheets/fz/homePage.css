@@ -257,3 +257,21 @@ ins, a {
     height: 45px;
     line-height: 45px;
 }
+#walkthrough-content {
+    display: none;
+}
+@font-face {
+    font-family: "ZoomlaXingtiJ";
+    src: url("http://code.zoomla.cn/font/ZoomlaXingtiJ.eot"); /* IE9 */
+    src: url("http://code.zoomla.cn/font/ZoomlaXingtiJ.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+
+    url("http://code.zoomla.cn/font/ZoomlaXingtiJ.woff") format("woff"), /* chrome、firefox */
+    url("http://code.zoomla.cn/font/ZoomlaXingtiJ.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+
+    url("http://code.zoomla.cn/font/ZoomlaXingtiJ.svg#ZoomlaXingtiJ") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+.art-font,.art-font *{
+     font-family:'LiDeBiao-Xing3c0e885e6419c0e';
+ }

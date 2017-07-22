@@ -25,6 +25,45 @@ var app = new Vue({
 
     },
     mounted:function () {
+        $('body').pagewalkthrough({
+            name: 'introduction',
+            steps: [{
+                popup: {
+                    content: '#walkthrough-1',
+                    type: 'modal'
+                }
+            }, {
+                wrapper: '.basic-info',
+                popup: {
+                    content: '#walkthrough-2',
+                    type: 'tooltip',
+                    position: 'bottom'
+                }
+            }, {
+                wrapper: '.links-wrapper',
+                popup: {
+                    content: '#walkthrough-3',
+                    type: 'tooltip',
+                    position: 'bottom'
+                }
+            }, {
+                wrapper: '.food-list .section-title-wrapper',
+                popup: {
+                    content: '#walkthrough-4',
+                    type: 'tooltip',
+                    position: 'bottom'
+                }
+            }, {
+                wrapper: '.fix-footer .footer-wrapper',
+                popup: {
+                    content: '#walkthrough-5',
+                    type: 'tooltip',
+                    position: 'top'
+                }
+            }]
+        });
 
+        // Show the tour
+        $('body').pagewalkthrough('show');
     }
 })
