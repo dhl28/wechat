@@ -28,7 +28,7 @@ var constant = {
             },{
                 "type": "view",
                 "name": "我要做饭",
-                "url": "http://123.206.33.24/register/provider-step1"
+                "url": "http://douhl.cn/register/provider-step1"
             }]
     }
 };
