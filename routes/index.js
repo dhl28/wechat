@@ -11,6 +11,7 @@ module.exports = function (app) {
     app.use('/users',require('./users'))
     app.use('/register',require('./register'))
     app.use('/fz',require('./fz'))
+    app.use('/sk',require('./sk'))
     app.use('/cook',require('./cook'))
 
 
