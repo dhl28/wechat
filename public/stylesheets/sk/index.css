@@ -51,7 +51,50 @@ ins, a {
 }
 
 .swiper-container {
-    height: 200px;
+    height: 150px;
+}
+.links-wrapper{
+    padding: 0 3px;
+}
+.links{
+    display: flex;
+    height: 80px;
+}
+.links .link-item{
+    flex: 1;
+
+}
+.links .link-item .link-icon{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    margin: 10px auto 10px auto;
+    border-radius: 50%;
+}
+.link-icon .fa {
+    position: relative;
+    left: 0px;
+    top: 12px;
+    font-size: 40px;
+}
+.links .link-item .link-label{
+    text-align: center;
+    font-size: 12px;
+}
+.links  .link-icon.icon1{
+    background-color: #F06292;
+}
+.links  .link-icon.icon2{
+    background-color: #4DD0E2;
+}
+.links  .link-icon.icon3{
+    background-color: #FF8A66;
+}
+.links  .link-icon.icon4{
+    background-color: #CF93D9;
 }
 
 .fix-footer{
