@@ -7,7 +7,8 @@
 var app = new Vue({
     el: '.container',
     data: {
-        isActive:false
+        isActive:false,
+        items:[]
     },
     methods:{
         toCpgl:function () {
@@ -33,7 +34,11 @@ var app = new Vue({
             pagination: '.swiper-pagination',
             prevButton:null,
             nextButton:null,
-
-
         })
+        //食品列表
+        var i=0,total = 10,list=[];
+        for(;i<total;i++){
+            list.push('item'+i)
+        }
+        this.$data.items = list;
     }})
