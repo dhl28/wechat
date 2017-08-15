@@ -12,4 +12,8 @@ router.use('/index', function(req, res, next) {
     res.render('sk/index.html');
 });
 
+router.use('/myinfo', function(req, res, next) {
+    res.render('sk/myInfo.html');
+});
+
 module.exports = router;
