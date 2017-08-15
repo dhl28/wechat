@@ -1,0 +1,97 @@
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 16px;
+  padding-bottom: 70px;
+  .head-info {
+    height: 100px;
+    padding: 10px 10px 10px 20px;
+    .icon{
+      float: left;
+      width: 100px;
+      background: grey;
+      height: 100%;
+      border-radius: 100px;
+      background: url("/public/imags/head.jpg") no-repeat center;
+      background-size: cover;
+    }
+    .disc{
+      padding-left: 120px;
+      height: 100%;
+      font-size: 18px;
+      .name{
+        padding-top: 28px;
+        margin-bottom: 15px;
+        padding-right: 20px;
+      }
+    }
+  }
+  ul {
+    background-color: #ffffff;
+    padding: 0 20px;
+    border-top: solid 1px rgba(94, 94, 94, 0.28);
+    border-bottom: solid 1px rgba(94, 94, 94, 0.28);
+    li {
+      padding: 10px 20px;
+      height: 30px;
+      border-bottom: 1px solid #f2f0f0;
+      line-height: 30px;
+      position: relative;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+    li .fa {
+      float: right;
+      position: relative;
+      top:5px;
+      color: rgba(94, 94, 94, 0.56);
+    }
+  }
+  .view-fz-info{
+    float: right;
+    font-size: 14px;
+  }
+
+  .links-wrapper{
+    padding: 10px 3px;
+    background-color: #ffffff;
+    .links{
+      display: flex;
+      height: 80px;
+      .link-item{
+        flex: 1;
+        .link-icon{
+          position: relative;
+          width: 60px;
+          height: 60px;
+          text-align: center;
+          font-size: 24px;
+          margin: auto;
+          border-radius: 50%;
+          .fa {
+            position: relative;
+            left: 0px;
+            top: 12px;
+            font-size: 36px;
+          }
+          .iconfont{
+            position: relative;
+            left: 4px;
+            top: 3px;
+            font-size: 50px;
+          }
+        }
+        .link-label{
+          text-align: center;
+          font-size: 12px;
+        }
+
+      }
+    }
+  }
+
+}
+
