@@ -15,5 +15,8 @@ router.use('/index', function(req, res, next) {
 router.use('/myinfo', function(req, res, next) {
     res.render('sk/myInfo.html');
 });
+router.use('/shoppingcart', function(req, res, next) {
+    res.render('sk/shoppingCart.html');
+});
 
 module.exports = router;
