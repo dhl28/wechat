@@ -11,9 +11,17 @@ var router = express.Router();
 router.use('/index', function(req, res, next) {
     res.render('sk/index.html');
 });
-
-router.use('/myinfo', function(req, res, next) {
-    res.render('sk/myInfo.html');
+router.use('/found', function(req, res, next) {
+    res.render('sk/found.html');
+});
+router.use('/wap', function(req, res, next) {
+    res.render('sk/wap.html');
+});
+router.use('/shihua', function(req, res, next) {
+    res.render('sk/shihua.html');
+});
+router.use('/my', function(req, res, next) {
+    res.render('sk/my.html');
 });
 router.use('/shoppingcart', function(req, res, next) {
     res.render('sk/shoppingCart.html');
