@@ -9,23 +9,10 @@ var constant = {
     'menu': {
         "button": [
             {
+                "type": "view",
                 "name": "我要吃饭",
-                "sub_button": [
-                    {
-                        "type": "view",
-                        "name": "我",
-                        "url": "http://www.soso.com/"
-                    },
-                    {
-                        "type": "view",
-                        "name": "我的订单",
-                        "url": "http://www.soso.com/"
-                    },{
-                        "type": "view",
-                        "name": "附近美食",
-                        "url": "http://www.soso.com/"
-                    }]
-            },{
+                "url": "http://douhl.cn/sk/my"
+            }, {
                 "type": "view",
                 "name": "我要做饭",
                 "url": "http://douhl.cn/register/provider-step1"
